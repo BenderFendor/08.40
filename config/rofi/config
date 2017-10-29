@@ -1,0 +1,106 @@
+"Enabled modi" Set from: Default
+rofi.modi:                           window,run,ssh
+"Window width" Set from: Default
+rofi.width:                          1000
+"Number of lines" Set from: Default
+rofi.lines:                          10
+"Number of columns" Set from: Default
+rofi.columns:                        1
+"Font to use" Set from: Default
+rofi.font:                           Dina 12
+"Border width" Set from: Default
+rofi.bw:                             1
+"Location on screen" Set from: Default
+rofi.location:                       0
+"Padding" Set from: Default
+rofi.padding:                        0
+"Y-offset relative to location" Set from: Default
+rofi.yoffset:                        0
+"X-offset relative to location" Set from: Default
+rofi.xoffset:                        0
+"Always show number of lines" Set from: Default
+rofi.fixed-num-lines:                true
+"Terminal to use" Set from: Default
+rofi.terminal:                       rofi-sensible-terminal
+"Ssh client to use" Set from: Default
+rofi.ssh-client:                     ssh
+"Ssh command to execute" Set from: Default
+rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
+"Run command to execute" Set from: Default
+rofi.run-command:                    {cmd}
+"Command to get extra run targets" Set from: Default
+rofi.run-list-command:
+"Run command to execute that runs in shell" Set from: Default
+rofi.run-shell-command:              {terminal} -e {cmd}
+"Command executed on accep-entry-custom for window modus" Set from: Default
+rofi.window-command:                 xkill -id {window}
+"Disable history in run/ssh" Set from: Default
+rofi.disable-history:                false
+"Use levenshtein sorting" Set from: Default
+rofi.levenshtein-sort:               false
+"Set case-sensitivity" Set from: Default
+rofi.case-sensitive:                 false
+"Cycle through the results list" Set from: Default
+rofi.cycle:                          true
+"Enable sidebar-mode" Set from: Default
+rofi.sidebar-mode:                   false
+"Row height (in chars)" Set from: Default
+rofi.eh:                             1
+"Enable auto select mode" Set from: Default
+rofi.auto-select:                    false
+"Parse hosts file for ssh mode" Set from: Default
+rofi.parse-hosts:                    false
+"Parse known_hosts file for ssh mode" Set from: Default
+rofi.parse-known-hosts:              true
+"Set the modi to combine in combi mode" Set from: Default
+rofi.combi-modi:                     window,run
+"Set the matching algorithm. (normal, regex, glob, fuzzy)" Set from: Default
+rofi.matching:                       normal
+"Tokenize input string" Set from: Default
+rofi.tokenize:                       true
+"Monitor id to show on" Set from: Default
+rofi.m:                              -5
+"Margin between rows" Set from: Default
+rofi.line-margin:                    0
+"Padding within rows" Set from: Default
+rofi.line-padding:                   5
+"Pre-set filter" Set from: Default
+rofi.filter:
+"Separator style (none, dash, solid)" Set from: Default
+rofi.separator-style:                none
+"Hide scroll-bar" Set from: Default
+rofi.hide-scrollbar:                 true
+"Fullscreen" Set from: Default
+rofi.fullscreen:                     false
+"Fake transparency" Set from: Default
+rofi.fake-transparency:              true
+"DPI" Set from: Default
+rofi.dpi:                            -1
+"Threads to use for string matching" Set from: Default
+rofi.threads:                        0
+"Scrollbar width" Set from: Default
+rofi.scrollbar-width:                8
+"Scrolling method. (0: Page, 1: Centered)" Set from: Default
+rofi.scroll-method:                  0
+"Background to use for fake transparency. (background or screenshot)" Set from: Default
+rofi.fake-background:                screenshot
+"Window Format. w (desktop name), t (title), n (name), r (role), c (class)" Set from: Default
+rofi.window-format:                  {w}   {c}   {t}
+"Click outside the window to exit" Set from: Default
+rofi.click-to-exit:                  true
+"Indicate how it match by underlining it." Set from: Default
+rofi.show-match:                     true
+"Pidfile location" Set from: Default
+rofi.pid:                            /run/user/1001/rofi.pid
+"The display name of this browser" Set from: Default
+rofi.display-ssh:
+"The display name of this browser" Set from: Default
+rofi.display-run:
+"The display name of this browser" Set from: Default
+rofi.display-drun:
+"The display name of this browser" Set from: Default
+rofi.display-window:
+"The display name of this browser" Set from: Default
+rofi.display-windowcd:
+"The display name of this browser" Set from: Default
+rofi.display-combi:

@@ -1,0 +1,160 @@
+/*
+ This Is My Wal Thing so yeah
+ */
+
+@import url("file:///home/bender/.cache/wal/colors.css");
+
+@syntax-background-color: var(--color0);
+@base-border-color: var(--color1);
+@syntax-accent: var(--color1);
+
+atom-workspace {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color0)
+}
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  color: var(--color15);
+  background-color: var(--color0);
+}
+.tab-bar {
+  background-color: var(--color0);
+
+  .tab {
+
+    &.active {
+      box-shadow: inset 0 -2px 0 0 var(--color1);
+    }
+
+    &.modified:not(:hover) .close-icon {
+      &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 2px solid var(--color3);
+        border-radius: 50%;
+        opacity: 1;
+      }
+    }
+
+    &.modified:hover .close-icon {
+      color: currentColor;
+      &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border: 2px solid var(--color5);
+        border-radius: 50%;
+        opacity: 0;
+      }
+
+      &:hover {
+        color: var(--color5);
+      }
+    }
+
+    &.is-dragging {
+      background: darken(@base-background-color, 4%);
+      opacity: .5;
+      & .close-icon {
+        visibility: hidden;
+      }
+    }
+  }
+}
+.tree-view-resizer {
+  border-right: 1px solid @base-border-color;
+}
+
+.tree-view {
+  background-color: var(--color0);
+  font-weight: 300;
+  letter-spacing: .4px;
+
+  .list-tree {
+    color: var(--color15);
+  }
+
+  .list-item.selected {
+    color: var(--color1);
+    background-color: var(--color8)
+  }
+
+  .entry::before {
+    height: 40px;
+  }
+
+  .entry.selected {
+    &::before {
+      background: var(--color5);
+    }
+
+    > .list-item {
+      color: var(--color1);
+    }
+  }
+
+  .list-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .project-root {
+    &::before {
+      height: @tab-height;
+    }
+    > .header {
+      height: @tab-height;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+atom-panel.modal.from-top {
+    top: 75px;
+}
+
+atom-panel.modal {
+    background: var(--color0);
+}
+
+atom-panel.modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: @base-background-color;
+    z-index: -1;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+atom-panel.modal::after {
+    content: '';
+    position: fixed;
+    background: darken(@base-background-color, 10%);
+    opacity: 0.75;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backface-visibility: hidden;
+    z-index: -2;
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  border-color: var(--color3);
+}
+
+atom-pane-axis {
+    &.vertical > atom-pane:not(:first-child) {
+        border-top: 1px solid var(--color1);
+    }
+    &.horizontal > atom-pane:not(:first-child) {
+        border-left: 1px solid var(--color1);
+    }
+}

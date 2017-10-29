@@ -1,0 +1,112 @@
+;-------------------------------------------------
+;                                                ;
+;           Polybar config for my themes         ;
+; 				                 				               ;
+;                        Edited By Bender        ;
+;-------------------------------------------------
+
+
+[colors]
+my_background 	= #141021
+my_foreground 	= #ffeefc
+my_color0	= #c16772
+my_color1	= #545d67
+my_color2	= #c05c47
+my_color3	= #c16772
+my_color4	= #428e8e
+my_color5	= #afda6e
+my_color6	= #e4b226
+my_color7	= #ebcf1a
+my_color8	= #4457a3
+my_color9	= #4880a5
+my_color10	= #903a62
+my_color11	= #9568a1
+my_color12	= #7aa1dc
+my_color13	= #abbcda
+my_color14	= #c4b7c5
+my_color15	= #ffeefc
+
+[bar/main_bar]
+monitor = LVDS1
+bottom = false
+height = 25
+scroll-up = amixer -q sset Master 3%+
+scroll-down = amixer -q sset Master 3%-
+background = ${xrdb:color7}
+foreground =  ${xrdb:color0}
+font-0 = artwiz lemon:pixelsize=15
+font-1 = Icons:pixelsize=12
+tray-offset-x = 120
+module-margin = 2
+border-size = 0
+line-size = 0
+line-color = ${xrdb:color14}
+modules-left = i3
+modules-center = title
+modules-right =  mpd date volume
+
+wm-restack = i3
+
+[settings]
+format-underline = ${xrdb:color14}
+
+[module/title]
+type = internal/xwindow
+label = %title%
+label-maxlen = 60
+format-background = ${xrdb:color7}
+format-foreground = ${xrdb:color0}
+format-underline = ${xrdb:color14}
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+format-online = %{A1:mpc toggle:}%{A3:mpc next:}%{A2:mpc prev:}%{A4:mpc volume +2:}%{A5: mpc volume -2:}<label-song>%{A}%{A}%{A}%{A}%{A}
+format-margin = 2
+
+[module/i3]
+type = internal/i3
+
+label-unfocused-background = ${xrdb:color7}
+label-unfocused-foreground = ${xrdb:color2}
+label-unfocused-underline = ${xrdb:color0}
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = ${xrdb:color14}
+
+label-focused = %index%
+label-focused-foreground = ${xrdb:color7}
+label-focused-background = ${xrdb:color0}
+label-focused-underline = ${xrdb:color14}
+label-focused-padding = 2
+
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+label-visible = %index%
+label-visible-underline = ${xrdb:color7}
+label-visible-padding = 2
+
+label-urgent = %index%
+label-urgent-foreground = ${xrdb:color7}
+label-urgent-background = ${xrdb:color0}
+label-urgent-underline = ${xrdb:color6}
+label-urgent-padding = 2
+
+[module/volume]
+type = internal/volume
+format-volume = <label-volume>
+label-volume = Vol %percentage%%
+label-volume-padding = 1
+label-muted = mute
+
+[module/date]
+type = internal/date
+interval = 5
+time = "%{A3:bash /usr/bin/i3lock-fancy:}%I:%M %p"
+format-prefix-foreground = ${xrdb:color7}
+format-underline = ${xrdb:color14}
+label = %date%%time%
+format-margin = 2

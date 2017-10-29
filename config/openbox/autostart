@@ -1,0 +1,11 @@
+xrandr --auto --output HDMI3 --mode 1920x1080i --right-of LVDS1
+wal -i "$(< "${HOME}/.cache/wal/wal")"
+wpg -r
+bash ~/.config/polybar/lauchopen.sh
+compton -b --config ~/.config/compton.conf &
+tint2
+
+mpd &
+
+## GNOME PolicyKit authentication
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &

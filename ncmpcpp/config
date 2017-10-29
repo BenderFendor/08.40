@@ -1,0 +1,40 @@
+# Dylan's ncmpcpp config modded
+
+execute_on_song_change = "/home/bender/.scripts/art.sh & pkill feh"
+
+# General
+autocenter_mode = "yes"
+message_delay_time = "1"
+external_editor = "/usr/bin/nvim"
+use_console_editor = "yes"
+regular_expressions = "extended"
+mpd_music_dir = ~/Music
+
+# Playlist
+playlist_disable_highlight_delay = 1
+song_columns_list_format = "(6)[]{} (23)[red]{a} (26)[yellow]{t|f} (40)[green]{b} (4)[blue]{l}"
+song_list_format = " $7%l  $2%t $R$5%a "
+playlist_display_mode = "classic"
+centered_cursor = "yes"
+
+# Now Playing
+jump_to_now_playing_song_at_start = "yes"
+now_playing_prefix = "$5> "
+# now_playing_suffix = ""
+
+# Bars
+progressbar_color = "black"
+progressbar_elapsed_color = "blue"
+progressbar_look = "__"
+
+# UI
+header_visibility = "no"
+titles_visibility = "no"
+statusbar_visibility = "no"
+
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "30"
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "+|"
